@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { PostListComponent } from './post-list/post-list.component';
-
+import { ReactiveFormsModule,FormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -12,7 +12,7 @@ import { PostListComponent } from './post-list/post-list.component';
     PostListComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule
+    BrowserModule,HttpClientModule,FormsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
