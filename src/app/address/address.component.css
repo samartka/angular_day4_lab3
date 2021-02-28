@@ -1,0 +1,20 @@
+.form-group{
+    margin: auto;
+    width: 75vw;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    
+}
+input{
+    border: 0px;
+    border-bottom: 1px solid darkgray;
+    /* width: 50vw; */
+    margin-bottom: 10px;
+    
+}
+.background{
+    background-color: lightblue;
+    height: 100vh;
+}

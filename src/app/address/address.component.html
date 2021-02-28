@@ -1,0 +1,30 @@
+<body class="background">
+    <form [formGroup]="form" class="form-group" >
+        <div >
+            Name<span style="color: red;">*</span><span style="color: red;" *ngIf="form.get('name').errors?.required">required</span>
+    
+            <input formControlName="name" class="form-control" placeholder="Your answer">
+        </div>
+        <div>
+            E mail<span style="color: red;">*</span>
+            <span style="color: red;" *ngIf="form.get('email').errors?.required">required</span>
+            <span style="color: red;" *ngIf="form.get('email').errors?.email">Invalid</span>
+            <input formControlName="email" class="form-control" placeholder="Your answer">
+    
+        </div>
+        <div>
+            Postal address<span style="color: red;">*</span>
+            <span style="color: red;" *ngIf="form.get('address').errors?.required">required</span>
+            <input formControlName="address" class="form-control" placeholder="Your answer">
+    
+        </div>  
+        <div>
+            Comments<input formControlName="comments" class="form-control" placeholder="Your answer">
+        </div>       
+        <div>
+            <button class="btn btn-primary">Submit</button>
+        </div>
+    
+    </form>
+</body>
+
