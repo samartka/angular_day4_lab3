@@ -1,1 +1,33 @@
-<p>money-exchange works!</p>
+   <form [formGroup]="form"  style="margin-top: 5vh;margin-left: 5vw;">
+        <div >
+            Source amount 
+            <input formControlName="source_amount" style="margin-left: 32px;width: 120px;"> 
+            <input formControlName="source_code" style="margin-left: 20px;width: 120px;" >  
+            <div>
+                <p style="color: red;" *ngIf="form.get('source_amount').errors?.required">Amount required</p>
+
+                <p style="color: red;" *ngIf="form.get('source_code').errors?.required">Code required</p>
+                <p style="color: red;" *ngIf="form.get('source_code').errors?.minlength">Code must be at least 3 letters</p>
+            </div>
+ 
+    
+        </div>
+        <div style="margin-top: 25px;">
+            Destination amount 
+            <input readonly formControlName="destination_amount" style="width: 120px; background-color: aqua;"> 
+         
+            <input formControlName="destination_code" style="margin-left: 20px;width: 120px;" >  
+            <div>
+                <span style="color: red;" *ngIf="form.get('destination_code').errors?.required">Code required</span>
+                <span style="color: red;" *ngIf="form.get('destination_code').errors?.minlength">Code must be at least 3 letters</span>
+      
+            </div>
+  
+        </div>
+
+        <div style="margin-top: 25px;">
+            <button [disabled]="form.invalid" class="btn btn-primary" (click)="getConvert()">Submit</button>
+        </div>
+    
+    </form>
+
